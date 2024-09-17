@@ -14,7 +14,7 @@ const Image = (props) => {
     }
 
     const handlerotate = () => {
-      
+        setstyle("")
         setstyle("rotate")
     }
     const handlefilters = () =>{
@@ -49,6 +49,11 @@ const Image = (props) => {
         setoption("")
         setoption("bright")
     }
+
+    const handlecrop = () => {
+       setstyle("")
+       setstyle("crop");
+    }
   return (
     <div className='fullcontainer'>
     <div className='img'>
@@ -74,7 +79,7 @@ const Image = (props) => {
      <img className='filter' src='https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/rotate_left.png'/>
        <div>Rotate</div>
         </button> 
-     <button>
+     <button onClick={handlecrop}>
 
      <img className='filter' src='https://static.vecteezy.com/system/resources/previews/026/220/106/non_2x/crop-icon-symbol-design-illustration-vector.jpg'/>
        <div>Crop</div>

@@ -114,7 +114,12 @@
     filter: invert(1);
     object-fit: cover;
 }
-
+.crop{
+    transform: scale(0.6);
+}
+.filters button img{
+    width: 72px;
+}
 @media only screen and (max-width:600px) {
     .basic{
         width: 320px;
@@ -151,5 +156,12 @@
     .rotate{
         width: 220px;
         height: 240px;
+    }
+    .crop{
+        transform: scale(0.5);
+    }
+    .filters button img{
+        width: 38px;
+        height: 50px;
     }
 }
