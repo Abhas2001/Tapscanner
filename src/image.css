@@ -1,0 +1,155 @@
+.fullcontainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    color: white;
+}
+.btn{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 20px;
+}
+.btnn{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.btnn button{
+    color: white;
+    font-size: 12px;
+    font-weight:600;
+ }
+
+.btn button{
+   color: white;
+   font-size: 16px;
+   font-weight:600;
+}
+.pdfbtn{
+    background-color: blueviolet;
+    width: 30vh;
+    padding: 25px;
+    border-radius:35px;
+    
+}
+.rotate{
+    rotate: 180deg;
+}
+.image{
+    width: 90px;
+    height: 10vh;
+    filter: grayscale(0%);
+}
+.bandw{
+    width: 90px;
+    height: 10vh;
+    filter: grayscale(100%);
+}
+.lessbright{
+    width: 90px;
+    height: 10vh;
+    filter:hue-rotate(90deg);
+}
+.bright{
+    width: 90px;
+    height: 10vh;
+    filter:saturate(2);
+}
+.invert{
+    width: 90px;
+    height: 10vh;
+    filter:invert(1);
+}
+.sepia{
+    width: 90px;
+    height: 10vh;
+    filter:sepia(1);
+}
+.basicinvert{
+    width: 640px;
+    height: 480px;
+    filter:invert(1);
+}
+.basicsepia{
+    width: 640px;
+    height: 480px;
+    filter:sepia(1);
+}
+.basicbandw{
+    width: 640px;
+    height: 480px;
+    filter: grayscale(100%);
+}
+
+.basiclessbright{
+    width: 640px;
+    height: 480px;
+    filter:hue-rotate(90deg);
+}
+.basicimage{
+    width: 640px;
+    height: 480px;
+    filter: grayscale(0%);
+}
+.basicbright{
+    width: 640px;
+    height: 480px;
+    filter:saturate(2);
+}
+.rotateinvert{
+    width: 640px;
+    height: 480px;
+    filter:invert(1);
+    rotate: 90deg;
+}
+.filter{
+    width: 45px;
+    height: 5vh;
+    filter: invert(1);
+    object-fit: cover;
+}
+
+@media only screen and (max-width:600px) {
+    .basic{
+        width: 320px;
+        height: 240px;
+    }
+    .img{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnn button {
+        color: white;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .filter {
+        width: 36px;
+        height: 4vh;
+        filter: invert(1);
+        object-fit: cover;
+    }
+    .btn button {
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .pdfbtn {
+        background-color: blueviolet;
+        width: 14vh;
+        padding: 25px;
+        border-radius: 35px;
+    }
+    .rotate{
+        width: 220px;
+        height: 240px;
+    }
+}
