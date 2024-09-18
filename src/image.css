@@ -38,13 +38,38 @@
     border-radius:35px;
     
 }
+.imgfilter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
 .rotate{
+    width: 250px;
+    rotate: 90deg;
+}
+.rotate2{
+    width: 520px;
     rotate: 180deg;
+}
+
+.rotate3{
+    width: 250px;
+    rotate: 270deg;
+}
+.rotatef{
+    width: 520px;
+    rotate: 360deg;
 }
 .image{
     width: 90px;
     height: 10vh;
     filter: grayscale(0%);
+}
+.imgnfilter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .bandw{
     width: 90px;
@@ -115,8 +140,15 @@
     object-fit: cover;
 }
 .crop{
+    transform: scale(0.8);
+}
+.crop1{
     transform: scale(0.6);
 }
+.crop2{
+    transform: scale(0.2);
+}
+
 .filters button img{
     width: 72px;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './image.css';
 import { useState } from 'react';
 
@@ -8,15 +8,45 @@ const Image = (props) => {
     const[filters , setfilters] = useState(false);
     const[count,setcount] = useState(false);
     const[val,setval] = useState("");
-
+ const[rotation , setrotation] = useState(0)
+ const[resize , setresize] = useState(0)
     const handledelete = () =>{
         props.setoption(0);
     }
 
     const handlerotate = () => {
+      
+      setrotation(rotation+1);
+      console.log(rotation);
+     
+    }
+
+    useEffect(()=>{
+      if(rotation==1){
         setstyle("")
         setstyle("rotate")
+      }
+      if(rotation==2){
+        
+          setstyle("")
+          setstyle("rotate2")
+        
+      }
+      if(rotation==3){
+        
+        setstyle("")
+        setstyle("rotate3")
+      
     }
+    if(rotation>3){
+        
+      setstyle("")
+      setstyle("rotatef")
+    
+  }
+    },[rotation])
+
+
     const handlefilters = () =>{
         
           setfilters(!filters)
@@ -51,15 +81,35 @@ const Image = (props) => {
     }
 
     const handlecrop = () => {
-       setstyle("")
-       setstyle("crop");
+      setresize(resize+1);
     }
+
+    useEffect(()=>{
+      if(resize==1){
+        setstyle("")
+        setstyle("crop")
+      }
+      if(resize==2){
+        setstyle("")
+        setstyle("crop1")
+      }
+      if(resize==3){
+        setstyle("")
+        setstyle("crop2")
+      }
+      if(resize>3){
+        setstyle("")
+        setstyle("basic")
+      }
+    },[resize])
   return (
     <div className='fullcontainer'>
     <div className='img'>
+      <div className='imgnfilter'>
         <div className='imgfilter'>
      <img className={style+option} src={props.imgaddress}/>
-     
+        </div>
+        <div>
      { filters==true ?
      <div className='filters'>
         <button onClick={handleimage} ><img className="image" src={props.imgaddress}/></button>
@@ -74,6 +124,7 @@ const Image = (props) => {
      <div></div>
 }
      </div>
+     </div>
      <div className='btnn'>
      <button onClick={handlerotate}>
      <img className='filter' src='https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/rotate_left.png'/>
@@ -82,7 +133,7 @@ const Image = (props) => {
      <button onClick={handlecrop}>
 
      <img className='filter' src='https://static.vecteezy.com/system/resources/previews/026/220/106/non_2x/crop-icon-symbol-design-illustration-vector.jpg'/>
-       <div>Crop</div>
+       <div>Resize</div>
      </button>
      <button>
 
