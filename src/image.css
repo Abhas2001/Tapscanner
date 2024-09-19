@@ -97,39 +97,39 @@
     filter:sepia(1);
 }
 .basicinvert{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter:invert(1);
 }
 .basicsepia{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter:sepia(1);
 }
 .basicbandw{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter: grayscale(100%);
 }
 
 .basiclessbright{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter:hue-rotate(90deg);
 }
 .basicimage{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter: grayscale(0%);
 }
 .basicbright{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter:saturate(2);
 }
 .rotateinvert{
-    width: 640px;
-    height: 480px;
+    width: 520px;
+    height: 390px;
     filter:invert(1);
     rotate: 90deg;
 }
@@ -195,5 +195,35 @@
     .filters button img{
         width: 38px;
         height: 50px;
+    }
+    .basicinvert{
+        width: 320px;
+        height: 240px;
+        filter:invert(1);
+    }
+    .basicsepia{
+        width: 320px;
+        height: 240px;
+        filter:sepia(1);
+    }
+    .basicbandw{
+        width: 320px;
+        height: 240px;
+        filter: grayscale(100%);
+    }
+    .basiclessbright{
+        width: 320px;
+        height: 240px;
+        filter:hue-rotate(90deg);
+    }
+    .basicimage{
+        width: 320px;
+        height: 240px;
+        filter: grayscale(0%);
+    }
+    .basicbright{
+        width: 320px;
+        height: 240px;
+        filter:saturate(2);
     }
 }
