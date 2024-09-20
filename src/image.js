@@ -10,10 +10,12 @@ const Image = (props) => {
     const[val,setval] = useState("");
  const[rotation , setrotation] = useState(0)
  const[resize , setresize] = useState(0)
-    const handledelete = () =>{
-        props.setoption(0);
-    }
-
+    // const handledelete = () =>{
+    //     props.setoption(0);
+    // }
+  const handleSave = () =>{
+    props.setoption(2);
+  }
     const handlerotate = () => {
       
       setrotation(rotation+1);
@@ -22,24 +24,25 @@ const Image = (props) => {
     }
 
     useEffect(()=>{
-      if(rotation==1){
+      if(rotation%2==1){
+        setoption("")
         setstyle("")
         setstyle("rotate")
       }
-      if(rotation==2){
-        
+      if(rotation%4==2){
+        setoption("")
           setstyle("")
           setstyle("rotate2")
         
       }
-      if(rotation==3){
-        
+      if(rotation%4==3){
+        setoption("")
         setstyle("")
         setstyle("rotate3")
       
     }
-    if(rotation>3){
-        
+    if(rotation%4==0){
+      setoption("")
       setstyle("")
       setstyle("rotatef")
     
@@ -53,31 +56,37 @@ const Image = (props) => {
     }
 
     const handleinvert = () =>{
-        setoption("invert")
+      setstyle("")
+      setoption("")
+        setoption("basicinvert")
     }
 
     const handlesepia = () => {
-      
+            setstyle("")
             setoption("")
-            setoption("sepia")
+            setoption("basicsepia")
       
     }
     const handlebandw = () => {
+      setstyle("")
         setoption("")
-        setoption("bandw")
+        setoption("basicbandw")
     }
     const handlelessbright = () => {
+      setstyle("")
         setoption("")
-        setoption("lessbright")
+        setoption("basiclessbright")
     }
 
     const handleimage = () => {
+      setstyle("")
         setoption("")
-        setoption("image")
+        setoption("basicimage")
     }
     const handlebright = () => {
+      setstyle("")
         setoption("")
-        setoption("bright")
+        setoption("basicbright")
     }
 
     const handlecrop = () => {
@@ -85,19 +94,23 @@ const Image = (props) => {
     }
 
     useEffect(()=>{
-      if(resize==1){
+      if(resize%2==1){
+        setoption("")
         setstyle("")
         setstyle("crop")
       }
-      if(resize==2){
+      if(resize%4==2){
+        setoption("")
         setstyle("")
         setstyle("crop1")
       }
-      if(resize==3){
+      if(resize%4==3){
+        setoption("")
         setstyle("")
         setstyle("crop2")
       }
-      if(resize>3){
+      if(resize%4==0){
+        setoption("")
         setstyle("")
         setstyle("basic")
       }
@@ -144,11 +157,11 @@ const Image = (props) => {
         <img className='filter' src='https://www.shutterstock.com/image-vector/filter-icon-solid-style-about-260nw-2199621737.jpg'/>
        <div>Filters</div>
      </button>
-     <button onClick={handledelete}>
+     <button >
         <img className='filter' src='https://static.vecteezy.com/system/resources/previews/030/343/284/non_2x/delete-icon-symbol-design-illustration-vector.jpg'/>
        <div>Delete</div></button>
      </div>
-     <div onClick={handledelete} className='btn'><button>Keep Scanning</button> <button className='pdfbtn'>Save PDF</button></div>
+     <div className='btn'><button>Keep Scanning</button> <button onClick={handleSave} className='pdfbtn'>Save PDF</button></div>
     </div>
     
     </div>
