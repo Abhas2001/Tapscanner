@@ -14,8 +14,8 @@ const Pdf = (props) => {
       margin:       1,
       filename:     'exported_file.pdf',
       image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 }, 
-      jsPDF:        { unit: 'mm', format:[100, 200], orientation: 'portrait' }
+      html2canvas:  { scale: 2 , backgroundColor:'#000000' }, 
+      jsPDF:        { unit: 'mm', backgroundColor:'#000000', format:[100, 200], orientation: 'portrait' }
     };
   
     if (imgElement.complete) {
