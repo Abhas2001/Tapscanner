@@ -16,6 +16,10 @@ const Image = (props) => {
   const handleSave = () =>{
     props.setoption(2);
   }
+
+  const handlecamera = () =>{
+    props.setoption(0);
+  }
     const handlerotate = () => {
       
       setrotation(rotation+1);
@@ -161,7 +165,7 @@ const Image = (props) => {
         <img className='filter' src='https://static.vecteezy.com/system/resources/previews/030/343/284/non_2x/delete-icon-symbol-design-illustration-vector.jpg'/>
        <div>Delete</div></button>
      </div>
-     <div className='btn'><button>Keep Scanning</button> <button onClick={handleSave} className='pdfbtn'>Save PDF</button></div>
+     <div  className='btn'><button onClick={handlecamera}>Keep Scanning</button> <button onClick={handleSave} className='pdfbtn'>Save PDF</button></div>
     </div>
     
     </div>

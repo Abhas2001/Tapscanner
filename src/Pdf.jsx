@@ -6,6 +6,12 @@ import ima from './images/dummy.jpg'
 
 const Pdf = (props) => {
   const contentRef = useRef(); 
+  const handleback = () => {
+    props.setoption(0);
+  }
+  const handlestate = () =>{
+    props.setoption(1);
+  }
 
   const exportHTMLtoPDF = () => {
     const element = contentRef.current; 
@@ -36,6 +42,11 @@ const Pdf = (props) => {
        
         <img className='img' src={props.imgaddress}/>
    
+      
+      </div>
+      <div className='exportbtn'>
+      <button onClick={handlestate} className="butt">Back</button>
+        <button onClick={handleback} className="butt">Scan Again</button>
       <button onClick={exportHTMLtoPDF} className="butt">Export to PDF</button>
       </div>
       </>

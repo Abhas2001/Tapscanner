@@ -17,7 +17,7 @@ console.log(option);
    : option==1 ?
    <Image imgaddress={imgaddress} setoption={setoption}/>
    :
-   <Pdf imgaddress={imgaddress} />
+   <Pdf setoption={setoption} imgaddress={imgaddress} />
 
   );
 }

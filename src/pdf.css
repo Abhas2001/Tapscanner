@@ -2,7 +2,7 @@
 
 .main {
     width: 100%;
-    height: 100vh; 
+    height: 90vh; 
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -10,12 +10,24 @@
     overflow: hidden;
 }
 .main img{
-    height: 40vh;
+   
+    height: 75vh;
     overflow: hidden;
 }
 
 .butt{
     color: white;
     background-color: white;
-    border: 1px solid white;
+    font: bold;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 100px;
+    background-color: blueviolet;
+}
+.exportbtn{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
