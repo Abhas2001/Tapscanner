@@ -16,6 +16,7 @@ const videoConstraints = {
 
 export const WebcamCapture = (props) => {
   const [facingMode, setFacingMode] = React.useState(FACING_MODE_USER);
+  const [pics , setpics] = useState(0);
  
   const screenSize = useScreenSize();
   console.log(screenSize.width);
@@ -41,7 +42,11 @@ console.log(pdf);
     const imageSrc = webcamRef.current.getScreenshot();
     setimageUrl(imageSrc);
      setval(!val);
+     setpics(pics+1);
      
+  }
+  const handleretake = () =>{
+    setval(!val);
   }
   const Openimage = () =>{
     props.setoption(1);
@@ -86,12 +91,24 @@ console.log(pdf);
 </div>    
 
 <div className="capture">
-
-<button onClick={handleClick}><img className="rear" src="https://www.shutterstock.com/image-vector/switch-camera-icon-vector-symbol-260nw-2187122763.jpg"/></button>
+  { val == false ?
+<div className="candr">
+<button onClick={handleClick}><img className="rear" src="https://cdn.vectorstock.com/i/1000x1000/53/93/camera-rotate-icon-vector-17385393.webp"/></button>
 
 <button onClick={handleCapture} className="captur"><img src="https://static.vecteezy.com/system/resources/previews/007/522/948/original/camera-capture-icon-in-line-circle-button-vector.jpg"/></button>
+ </div>
+ :
+ <div className="wid">
 
-<button onClick={Openimage}><img className="image" src={imageUrl}/></button>
+  <button onClick={handleretake} className="retake">Keep Scanning</button>
+ </div>
+
+  }
+<button onClick={Openimage}>
+  <img className="image" src={imageUrl}/>
+  <div className="pics">{pics}</div>
+
+</button>
 </div> 
 
     </div>

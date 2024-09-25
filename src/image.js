@@ -10,6 +10,7 @@ const Image = (props) => {
     const[val,setval] = useState("");
  const[rotation , setrotation] = useState(0)
  const[resize , setresize] = useState(0)
+ const[showinput,setshowinput] = useState(false);
     // const handledelete = () =>{
     //     props.setoption(0);
     // }
@@ -25,6 +26,10 @@ const Image = (props) => {
       setrotation(rotation+1);
       console.log(rotation);
      
+    }
+
+    const handledelete = () => {
+      props.setoption(0);
     }
 
     useEffect(()=>{
@@ -96,7 +101,9 @@ const Image = (props) => {
     const handlecrop = () => {
       setresize(resize+1);
     }
-
+     const handleshowinput = () => {
+      setshowinput(!showinput);
+     }
     useEffect(()=>{
       if(resize%2==1){
         setoption("")
@@ -125,6 +132,13 @@ const Image = (props) => {
       <div className='imgnfilter'>
         <div className='imgfilter'>
      <img className={style+option} src={props.imgaddress}/>
+     {showinput == true ?
+     <div>
+     <input/>
+     </div>
+     :
+     <div></div>
+}
         </div>
         <div>
      { filters==true ?
@@ -152,16 +166,16 @@ const Image = (props) => {
      <img className='filter' src='https://static.vecteezy.com/system/resources/previews/026/220/106/non_2x/crop-icon-symbol-design-illustration-vector.jpg'/>
        <div>Resize</div>
      </button>
-     <button>
+     <button onClick={handleshowinput}>
 
-     <img className='filter' src='https://www.shutterstock.com/image-vector/contrast-icon-brightness-adjust-signs-260nw-1741922180.jpg'/>
-       <div>Contrast</div>
+     <img className='filter' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlE3thMrkwF-6vXrNBxBbT-xvENrlIikbu9A&s'/>
+       <div>Markup</div>
      </button>
      <button className={val} onClick={handlefilters}>
         <img className='filter' src='https://www.shutterstock.com/image-vector/filter-icon-solid-style-about-260nw-2199621737.jpg'/>
        <div>Filters</div>
      </button>
-     <button >
+     <button onClick={handledelete}>
         <img className='filter' src='https://static.vecteezy.com/system/resources/previews/030/343/284/non_2x/delete-icon-symbol-design-illustration-vector.jpg'/>
        <div>Delete</div></button>
      </div>

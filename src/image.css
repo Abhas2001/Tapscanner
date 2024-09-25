@@ -40,6 +40,7 @@
 }
 .imgfilter{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 55vh;
@@ -74,7 +75,7 @@
 .bandw{
     width: 90px;
     height: 10vh;
-    filter: grayscale(100%);
+    filter: grayscale(200%);
 }
 .lessbright{
     width: 90px;
@@ -84,12 +85,12 @@
 .bright{
     width: 90px;
     height: 10vh;
-    filter:saturate(2);
+    filter:brightness(2.5);
 }
 .invert{
     width: 90px;
     height: 10vh;
-    filter:invert(1);
+    filter:brightness(1.75);
 }
 .sepia{
     width: 90px;
@@ -99,7 +100,7 @@
 .basicinvert{
     width: 520px;
     height: 390px;
-    filter:invert(1);
+    filter:brightness(1.75);
 }
 .basicsepia{
     width: 520px;
@@ -125,7 +126,7 @@
 .basicbright{
     width: 520px;
     height: 390px;
-    filter:saturate(2);
+    filter:brightness(2.5);
 }
 .rotateinvert{
     width: 520px;
@@ -179,11 +180,13 @@
         object-fit: cover;
     }
     .btn button {
+        width: 100%;
         color: white;
         font-size: 12px;
         font-weight: 600;
     }
     .pdfbtn {
+        
         background-color: blueviolet;
         width: 14vh;
         padding: 25px;
@@ -203,31 +206,31 @@
     .basicinvert{
         width: 320px;
         height: 240px;
-        filter:invert(1);
+       
     }
     .basicsepia{
         width: 320px;
         height: 240px;
-        filter:sepia(1);
+        
     }
     .basicbandw{
         width: 320px;
         height: 240px;
-        filter: grayscale(100%);
+       
     }
     .basiclessbright{
         width: 320px;
         height: 240px;
-        filter:hue-rotate(90deg);
+      
     }
     .basicimage{
         width: 320px;
         height: 240px;
-        filter: grayscale(0%);
+       
     }
     .basicbright{
         width: 320px;
         height: 240px;
-        filter:saturate(2);
+        
     }
 }

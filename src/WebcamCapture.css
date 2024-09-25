@@ -1,3 +1,4 @@
+
 body{
     background-color: black;
 }
@@ -34,6 +35,24 @@ body{
     align-items: center;
     gap: 20px;
    
+}
+.candr{
+    display: flex;
+}
+.wid{
+    width: 198px;
+}
+.pics{
+    color: white;
+    font-weight: 600;
+}
+.retake{
+    background-color: black;
+    width: 150px;
+    padding: 25px;
+    border-radius:35px;
+    color: white;
+    font-weight: 600;
 }
 button{
     background-color:black;;
@@ -81,5 +100,8 @@ button img{
     .captured{
         width: 320px;
         height: 240px;
+    }
+    .Container{
+        justify-content: space-evenly;
     }
   }
