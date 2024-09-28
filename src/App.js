@@ -9,15 +9,17 @@ import Pdf from './Pdf';
 function App() {
   const[option,setoption] = useState(0);
 const[imgaddress , setimgaddress] = useState("");
+const[pdfstyle ,setpdfstyle] = useState("");
 
-console.log(option);
+
+console.log(pdfstyle);
   return (
     option == 0 ?
    <WebcamCapture imgaddress={imgaddress} setimgaddress={setimgaddress} option={option} setoption={setoption}/>
    : option==1 ?
-   <Image imgaddress={imgaddress} setoption={setoption}/>
+   <Image setpdfstyle={setpdfstyle} imgaddress={imgaddress} setoption={setoption}/>
    :
-   <Pdf setoption={setoption} imgaddress={imgaddress} />
+   <Pdf pdfstyle={pdfstyle} setoption={setoption} imgaddress={imgaddress} />
 
   );
 }

@@ -15,7 +15,7 @@ const Pdf = (props) => {
 
   const exportHTMLtoPDF = () => {
     const element = contentRef.current; 
-    const imgElement = element.querySelector('img');
+    const imgElement = element.querySelector("img");
     const opt = {
       margin:       1,
       filename:     'exported_file.pdf',
@@ -40,7 +40,7 @@ const Pdf = (props) => {
    
       <div ref={contentRef} className="main"> 
        
-        <img className='img' src={props.imgaddress}/>
+        <img className={props.pdfstyle} src={props.imgaddress}/>
    
       
       </div>

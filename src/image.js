@@ -37,23 +37,27 @@ const Image = (props) => {
         setoption("")
         setstyle("")
         setstyle("rotate")
+        props.setpdfstyle("basicsepia");
       }
       if(rotation%4==2){
         setoption("")
           setstyle("")
           setstyle("rotate2")
+          props.setpdfstyle("basicsepia");
         
       }
       if(rotation%4==3){
         setoption("")
         setstyle("")
         setstyle("rotate3")
+        props.setpdfstyle("basicsepia");
       
     }
     if(rotation%4==0){
       setoption("")
       setstyle("")
       setstyle("rotatef")
+      props.setpdfstyle("basicsepia");
     
   }
     },[rotation])
@@ -68,34 +72,40 @@ const Image = (props) => {
       setstyle("")
       setoption("")
         setoption("basicinvert")
+        props.setpdfstyle("basicsepia");
     }
 
     const handlesepia = () => {
             setstyle("")
             setoption("")
             setoption("basicsepia")
+            props.setpdfstyle("basicsepia");
       
     }
     const handlebandw = () => {
       setstyle("")
         setoption("")
         setoption("basicbandw")
+        props.setpdfstyle("basicsepia");
     }
     const handlelessbright = () => {
       setstyle("")
         setoption("")
         setoption("basiclessbright")
+        props.setpdfstyle("basicsepia");
     }
 
     const handleimage = () => {
       setstyle("")
         setoption("")
         setoption("basicimage")
+        props.setpdfstyle("basicsepia");
     }
     const handlebright = () => {
       setstyle("")
         setoption("")
         setoption("basicbright")
+        props.setpdfstyle("basicbright");
     }
 
     const handlecrop = () => {
