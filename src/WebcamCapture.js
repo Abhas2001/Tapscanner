@@ -1,5 +1,5 @@
 import Webcam from "react-webcam";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useState } from "react";
 import React from "react";
 import './WebcamCapture.css'
@@ -34,9 +34,12 @@ export const WebcamCapture = (props) => {
 
   const [val,setval] = useState(false);
   const[imageUrl,setimageUrl]=useState("");
+  const[items,setitems]=useState([]);
   const[pdf,setpdf]=useState(false);
   const[contrast,setcontrast]=useState(false);
-console.log(pdf);
+   
+
+
   const handleCapture = () =>{
 
     const imageSrc = webcamRef.current.getScreenshot();
@@ -45,6 +48,10 @@ console.log(pdf);
      setpics(pics+1);
      
   }
+
+  useEffect(()=>{
+    localStorage.setItem('imageUrl',JSON.stringify(imageUrl));
+},[items])
   const handleretake = () =>{
     setval(!val);
   }
