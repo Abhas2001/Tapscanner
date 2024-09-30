@@ -196,6 +196,13 @@
         width: 220px;
         height: 240px;
     }
+    .rotate2{
+        width: 220px;
+        height: 240px;
+    }
+    .rotatef{
+        width: 220px;
+    }
     .crop{
         transform: scale(0.5);
     }
