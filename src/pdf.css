@@ -20,6 +20,16 @@
     overflow: hidden;
     filter:brightness(2.5);
 }
+.basicbandw {
+    width: 520px;
+    height: 390px;
+    filter: grayscale(100%);
+}
+.basicsepia {
+    width: 520px;
+    height: 390px;
+    filter: sepia(1);
+}
 
 .butt{
     color: white;

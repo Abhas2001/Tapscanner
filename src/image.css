@@ -157,6 +157,15 @@
     width: 520px;
     height: 610px;
 }
+.gvmsh{
+
+    height: 81px;
+}
+.deletepermission{
+    width: 200px;
+    height: 200px;
+    background-color: cyan;
+}
 @media only screen and (max-width:600px) {
     .basic{
         width: 320px;

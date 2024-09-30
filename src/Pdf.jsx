@@ -15,7 +15,7 @@ const Pdf = (props) => {
 
   const exportHTMLtoPDF = () => {
     const element = contentRef.current; 
-    const imgElement = element.querySelector("img");
+    const imgElement = element.querySelector(`.${props.pdfstyle}`);
     const opt = {
       margin:       1,
       filename:     'exported_file.pdf',
