@@ -38,20 +38,30 @@ export const WebcamCapture = (props) => {
   const[pdf,setpdf]=useState(false);
   const[contrast,setcontrast]=useState(false);
    
-
-
+  const [finalimgsrc, setfinalimgsrc] = useState([]);
+  const[save,setsave] = useState();
+   
   const handleCapture = () =>{
 
     const imageSrc = webcamRef.current.getScreenshot();
     setimageUrl(imageSrc);
      setval(!val);
      setpics(pics+1);
+     const updatedImgSrcs = [ imageSrc];
+     setfinalimgsrc(updatedImgSrcs);
+   
+     localStorage.setItem('imageUrlss', JSON.stringify(updatedImgSrcs));
      
   }
 
-  useEffect(()=>{
-    localStorage.setItem('imageUrl',JSON.stringify(imageUrl));
-},[items])
+  useEffect(() => {
+    const savedImages = JSON.parse(localStorage.getItem('imageUrlss'));
+      setsave(savedImages)
+   
+  }, []);
+
+ 
+  console.log(save);
   const handleretake = () =>{
     setval(!val);
   }
@@ -112,7 +122,7 @@ export const WebcamCapture = (props) => {
 
   }
 <button onClick={Openimage}>
-  <img className="image" src={imageUrl}/>
+  <img className="image" src={save}/>
   <div className="pics">{pics}</div>
 
 </button>

@@ -142,7 +142,7 @@ const Image = (props) => {
       <div className='imgnfilter'>
         <div className='imgfilter'>
      <img className={style+option} src={props.imgaddress}/>
-      <div className='deletepermission'>are you sure you want to delete</div>
+
      {showinput == true ?
      <div>
      <input/>
